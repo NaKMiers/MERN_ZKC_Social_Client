@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './FollowerCard.module.scss'
-import {followers} from '../../Data/FollowerData'
+import { followers } from '../../Data'
 
 function FollowerCard() {
    return (
@@ -17,7 +17,7 @@ function FollowerCard() {
                   </div>
                </div>
 
-               <button className={`${styles.fcButton} button`}>Follow</button>
+               <button className={`${styles.fcBtn} button`}>Follow</button>
             </div>
          ))}
       </div>

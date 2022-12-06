@@ -4,11 +4,13 @@ import Cover from '../../imgs/cover.jpg'
 import Profile from '../../imgs/profileImg.jpg'
 
 function ProfileCard() {
+   const ProfilePage = true
+
    return (
       <div className={styles.profileCard}>
          <div className={styles.profileImages}>
-            <img src={Cover} alt="cover" />
-            <img src={Profile} alt="profile" />
+            <img src={Cover} alt='cover' />
+            <img src={Profile} alt='profile' />
          </div>
 
          <div className={styles.profileName}>
@@ -28,14 +30,20 @@ function ProfileCard() {
                   <span>1</span>
                   <span>Followings</span>
                </div>
+
+               {ProfilePage && (
+                  <>
+                     <div className={styles.vl}></div>
+                     <div className={styles.follow}>
+                        <span>3</span>
+                        <span>Posts</span>
+                     </div>
+                  </>
+               )}
             </div>
             <hr />
          </div>
-
-         <span>
-            My Profile
-         </span>
-
+         {ProfilePage ? '' : <span>My Profile</span>}
       </div>
    )
 }

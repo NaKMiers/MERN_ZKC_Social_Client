@@ -1,0 +1,42 @@
+.authPage {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   gap: 4rem;
+
+   & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+// Left Side
+
+.authLeft {
+   gap: 2rem;
+
+   & > img {
+      width: 4rem;
+      height: 4rem;
+   }
+}
+
+.webname {
+   & > h1 {
+      font-size: 3rem;
+      background-image: var(--buttonBg);
+      background-size: 100%;
+      background-repeat: repeat;
+      background-clip: inherit;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+   }
+   & > h6 {
+      font-size: 0.85rem;
+   }
+}
