@@ -27,7 +27,7 @@ function InfoCard() {
             <span>
                <b>Live in</b>
             </span>
-            <span> Multan</span>
+            <span> Ho Chi Minh City</span>
          </div>
 
          <div className={styles.info}>

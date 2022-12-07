@@ -33,10 +33,54 @@
       background-clip: inherit;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
    }
    & > h6 {
       font-size: 0.85rem;
    }
+}
+
+.authForm {
+   background-color: var(--cardColor);
+   border-radius: 1rem;
+   padding: 1rem;
+
+   & > div {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+.infoForm {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+
+   & > div {
+      display: flex;
+      gap: 1rem;
+      height: 2rem;
+   }
+}
+
+// Right Side
+
+.infoInput {
+   flex: 1;
+   background-color: var(--inputColor);
+   padding: 20px;
+   outline: none;
+   border: none;
+   border-radius: 8px;
+}
+
+.infoBtn {
+   width: 6rem;
+   height: 2rem;
+   align-self: flex-end;
 }
