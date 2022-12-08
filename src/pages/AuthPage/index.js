@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styles from './AuthPage.module.scss'
 import Logo from '../../imgs/logo.png'
-import authAction from '../../actions/AuthAction'
+import authAction from '../../actions/authAction'
 
 function AuthPage() {
    const dispatch = useDispatch()

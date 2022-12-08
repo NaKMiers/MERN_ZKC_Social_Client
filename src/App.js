@@ -7,7 +7,7 @@ import AuthPage from './pages/AuthPage'
 
 function App() {
    const user = useSelector(state => state.authReducer.authData)
-   console.log('user: ', user)
+
    return (
       <div className='App'>
          <div className='blur' style={{ top: '-18%', right: 0 }}></div>

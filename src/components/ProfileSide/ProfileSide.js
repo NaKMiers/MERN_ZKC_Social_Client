@@ -8,8 +8,8 @@ function ProfileSide() {
    return (
       <div className={styles.profileSide}>
          <LogoSearch />
-         <ProfileCard />
-         <FollowerCard/>
+         <ProfileCard location='homePage' />
+         <FollowerCard />
       </div>
    )
 }

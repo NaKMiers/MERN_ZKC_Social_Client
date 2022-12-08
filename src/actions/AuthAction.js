@@ -1,10 +1,10 @@
-import AuthApi from '../apis/AuthRequest'
+import authApi from '../apis/authRequest'
 
 const authAction = {
    login: formData => async dispatch => {
       dispatch({ type: 'AUTH_START' })
       try {
-         const { data } = await AuthApi.login(formData)
+         const { data } = await authApi.login(formData)
          console.log(data)
          dispatch({ type: 'AUTH_SUCCESS', payload: data })
       } catch (err) {
@@ -15,7 +15,7 @@ const authAction = {
    signUp: formData => async dispatch => {
       dispatch({ type: 'AUTH_START' })
       try {
-         const { data } = await AuthApi.signUp(formData)
+         const { data } = await authApi.signUp(formData)
          dispatch({ type: 'AUTH_SUCCESS', payload: data })
       } catch (err) {
          console.log(err)

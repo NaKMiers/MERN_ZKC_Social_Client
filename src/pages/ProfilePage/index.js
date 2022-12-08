@@ -11,7 +11,7 @@ function ProfilePage() {
          <ProfileLeft />
 
          <div className={styles.profileCenter}>
-            <ProfileCard />
+            <ProfileCard location='profilePage' />
             <PostSide />
          </div>
 

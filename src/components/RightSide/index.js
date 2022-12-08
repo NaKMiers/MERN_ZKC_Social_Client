@@ -6,6 +6,7 @@ import { UilSetting } from '@iconscout/react-unicons'
 import styles from './RightSide.module.scss'
 import TrendCard from '../TrendCard'
 import ShareModal from '../ShareModal'
+import { Link } from 'react-router-dom'
 
 function RightSide() {
    const [modalOpened, setModalOpened] = useState(false)
@@ -13,7 +14,9 @@ function RightSide() {
    return (
       <div className={styles.rightSide}>
          <div className={styles.navIcons}>
-            <img src={Home} alt='home-icon' />
+            <Link to='/'>
+               <img src={Home} alt='home-icon' />
+            </Link>
             <UilSetting />
             <img src={Noti} alt='noti-icon' />
             <img src={Comment} alt='comment-icon' />

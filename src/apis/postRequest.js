@@ -3,8 +3,8 @@ import axios from 'axios'
 const API = axios.create({ baseURL: 'http://localhost:3001' })
 
 const authApi = {
-   login: formData => API.post('/auth/login', formData),
-   signUp: formData => API.post('/auth/register', formData),
+   getTimeLinePosts: id => API.get('/posts/timeline/' + id),
+   likePost: (id, userId) => API.patch('/posts/' + id, { userId }),
 }
 
 export default authApi

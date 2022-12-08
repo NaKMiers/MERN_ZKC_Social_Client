@@ -1,6 +1,7 @@
 import HomePage from '../pages/HomePage'
 import AuthPage from '../pages/AuthPage'
 import ProfilePage from '../pages/ProfilePage'
+import NotFoundPage from '../pages/NotFoundPage'
 import { Route, Navigate } from 'react-router-dom'
 
 const routes = [
@@ -15,9 +16,14 @@ const routes = [
       element: <AuthPage />,
    },
    {
-      path: '/profile',
-      exact: true,
+      path: '/profile/:id',
+      exact: false,
       element: <ProfilePage />,
+   },
+   {
+      path: '*',
+      exact: false,
+      element: <NotFoundPage />,
    },
 ]
 

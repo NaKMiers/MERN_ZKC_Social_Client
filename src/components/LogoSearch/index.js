@@ -1,5 +1,5 @@
+import { UilSearch } from '@iconscout/react-unicons'
 import React from 'react'
-import {UilSearch} from '@iconscout/react-unicons'
 import Logo from '../../imgs/logo.png'
 import styles from './LogoSearch.module.scss'
 
