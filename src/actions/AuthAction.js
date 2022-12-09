@@ -22,6 +22,9 @@ const authAction = {
          dispatch({ type: 'AUTH_FAIL' })
       }
    },
+   logout: () => async dispatch => {
+      dispatch({ type: 'LOG_OUT' })
+   },
 }
 
 export default authAction

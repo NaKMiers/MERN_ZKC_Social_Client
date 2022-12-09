@@ -6,35 +6,3 @@
    border-radius: 0.7rem;
    font-size: 13px;
 }
-
-.follower {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-
-   & > .contentWrap {
-      display: flex;
-      gap: 10px;
-   }
-}
-
-.followerImg {
-   width: 3.2rem;
-   height: 3.2rem;
-   border-radius: 50%;
-}
-
-.name {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   & > span:nth-of-type(1) {
-      font-weight: bold;
-   }
-}
-
-.fcBtn {
-   height: 2rem;
-   padding: 0 20px;
-}

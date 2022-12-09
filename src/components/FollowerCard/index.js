@@ -1,24 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './FollowerCard.module.scss'
-import { followers } from '../../Data'
+import User from '../User'
+import { useSelector } from 'react-redux'
+import userApi from '../../apis/userRequest'
 
 function FollowerCard() {
+   const [persons, setPersons] = useState([])
+   const { user } = useSelector(state => state.authReducer.authData)
+   console.log('user: ', user)
+   console.log('persons: ', persons)
+
+   useEffect(() => {
+      const fetchPersons = async () => {
+         const { data } = await userApi.getAllUser()
+         setPersons(data.filter(person => person._id !== user._id))
+      }
+      fetchPersons()
+   }, [user._id])
+
    return (
       <div className={styles.followerCard}>
-         <h3>Who is following you</h3>
+         <h3>People you may know</h3>
 
-         {followers.map((follower, index) => (
-            <div key={index} className={styles.follower}>
-               <div className={styles.contentWrap}>
-                  <img className={styles.followerImg} src={follower.img} alt='avatar' />
-                  <div className={styles.name}>
-                     <span>{follower.name}</span>
-                     <span>@{follower.username}</span>
-                  </div>
-               </div>
-
-               <button className={`${styles.fcBtn} button`}>Follow</button>
-            </div>
+         {persons.map((person, index) => (
+            <User key={index} person={person} />
          ))}
       </div>
    )

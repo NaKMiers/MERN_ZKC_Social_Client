@@ -46,7 +46,7 @@ function ProfileCard({ location }) {
                </div>
                <div className={styles.vl}></div>
                <div className={styles.follow}>
-                  <span>{user.following.length}</span>
+                  <span>{user.followings.length}</span>
                   <span>Followings</span>
                </div>
 
