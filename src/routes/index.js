@@ -2,7 +2,8 @@ import HomePage from '../pages/HomePage'
 import AuthPage from '../pages/AuthPage'
 import ProfilePage from '../pages/ProfilePage'
 import NotFoundPage from '../pages/NotFoundPage'
-import { Route, Navigate } from 'react-router-dom'
+import {Route, Navigate} from 'react-router-dom'
+import ChatPage from '../pages/ChatPage'
 
 const routes = [
    {
@@ -19,6 +20,11 @@ const routes = [
       path: '/profile/:id',
       exact: false,
       element: <ProfilePage />,
+   },
+   {
+      path: '/chat',
+      exact: false,
+      element: <ChatPage />,
    },
    {
       path: '*',

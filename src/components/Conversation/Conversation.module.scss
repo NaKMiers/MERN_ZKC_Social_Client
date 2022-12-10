@@ -1,0 +1,67 @@
+.conversation {
+   border-radius: 0.5rem;
+   padding: 10px;
+
+   &:hover {
+      background: #80808038;
+      cursor: pointer;
+   }
+   & > div {
+      position: relative;
+      display: flex;
+      gap: 10px;
+   }
+}
+
+.follower {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   & > .contentWrap {
+      position: relative;
+      display: flex;
+      gap: 10px;
+   }
+}
+
+.onlineDot {
+   background-color: greenyellow;
+   border-radius: 50%;
+   position: absolute;
+   left: 2rem;
+   width: 1rem;
+   height: 1rem;
+}
+
+.followerImg {
+   width: 3.2rem;
+   height: 3.2rem;
+   border-radius: 50%;
+}
+
+.name {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   & > span:nth-of-type(1) {
+      font-weight: bold;
+   }
+}
+
+.chatboxEmptyMessage {
+   display: flex;
+   align-self: center;
+   justify-content: center;
+   font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+   .chat {
+      grid-template-columns: 16% auto;
+   }
+   .follower.conversation > div > .name {
+      display: none;
+   }
+}

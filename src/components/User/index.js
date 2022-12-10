@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, {useState} from 'react'
+import {useDispatch, useSelector} from 'react-redux'
 import userAction from '../../actions/userAction'
 import styles from './User.module.scss'
 
-function User({ person }) {
+function User({person}) {
    const dispatch = useDispatch()
-   const { user } = useSelector(state => state.authReducer.authData)
+   const {user} = useSelector(state => state.authReducer.authData)
    const [following, setFollowing] = useState(person.followers.includes(user._id))
    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
 
