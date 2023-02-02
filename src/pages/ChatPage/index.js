@@ -39,7 +39,8 @@ function ChatPage() {
 
    // connect to socket.io
    useEffect(() => {
-      socket.current = io('http://localhost:3002')
+      socket.current = io(process.env.REACT_APP_SOCKET)
+      console.log('REACT_APP_SOCKET: ', process.env.REACT_APP_SOCKET)
       socket.current.emit('new-user-add', user._id)
       socket.current.on('get-users', users => {
          setOnlineUsers(users)
